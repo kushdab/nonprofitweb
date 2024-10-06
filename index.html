@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathways to Progress</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa; /* Light background for contrast */
+        }
+
+        .background {
+            background-image: url('https://images.pexels.com/photos/2134246/pexels-photo-2134246.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+        }
+
+        header {
+            padding: 10px;
+        }
+
+        header h1 {
+            color: #28a745; /* Green color for the header */
+            background-color: rgba(255, 255, 255, 0.9); /* White translucent background */
+            padding: 10px; /* Static padding */
+            border-radius: 5px; /* Slight rounding for the header */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffc107; /* Highlight on hover */
+        }
+
+        .hover-section {
+            background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+            color: #333; /* Dark text for readability */
+            margin: 10px auto;
+            padding: 20px;
+            transition: transform 0.3s, background-color 0.3s;
+            cursor: pointer; /* Indicate clickable sections */
+            border-radius: 10px; /* Slight rounding for a modern look */
+            max-width: 600px; /* Max width for sections */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+
+        .hover-section:hover {
+            transform: scale(1.02);
+            background-color: rgba(255, 255, 255, 1); /* Solid white on hover */
+        }
+
+        #donation {
+            animation: bounce 2s infinite; /* Bouncing animation for donation section */
+            padding: 20px; /* Added padding for the section */
+            background-color: rgba(255, 255, 255, 0.8); /* White translucent background */
+            border-radius: 10px; /* Slight rounding for a modern look */
+            margin: 10px auto;
+            max-width: 600px; /* Match with other sections */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0); /* Original position */
+            }
+            50% {
+                transform: translateY(-10px); /* Move up slightly */
+            }
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 0.9em;
+            color: black; /* Set footer text color to black */
+        }
+
+        /* Donation Form Styles */
+        .donation-form {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            margin: 10px auto;
+            max-width: 350px; /* Reduced width */
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+        }
+
+        .donation-form input,
+        .donation-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0; /* Reduced margin */
+            border: none;
+            border-radius: 4px;
+        }
+
+        .donation-form input {
+            background-color: #ffffff; /* White background for input fields */
+            color: #333; /* Dark text for readability */
+        }
+
+        .donation-form button {
+            background-color: #28a745;
+            color: white;
+            font-weight: bold; /* Make button text bold */
+            transition: background-color 0.3s;
+        }
+
+        .donation-form button:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <header>
+            <h1>Pathways to Progress</h1> <!-- Updated Title -->
+            <p>Navigating the Road to Empowerment!</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#breeds">Projects</a></li>
+                <li><a href="#blog">Blog</a></li> <!-- Added Blog -->
+                <li><a href="#donation">Donate</a></li> <!-- Changed to Donate -->
+            </ul>
+        </nav>
+        <section id="projects" class="hover-section">
+            <h2>Our Projects</h2>
+            <p>Discover more from our Projects.</p> <!-- Retained Description -->
+        </section>
+        <section id="blog" class="hover-section">
+            <h2>Blog</h2>
+            <p>Read our latest articles on our projects.</p>
+        </section>
+        <section id="donation">
+            <h2>Make a Donation</h2>
+            <div class="donation-form">
+                <form id="donationForm">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <input type="number" id="amount" placeholder="Donation Amount" required min="1">
+                    <button type="submit">Donate</button>
+                </form>
+            </div>
+        </section>
+        <section id="about" class="hover-section" style="margin-bottom: 20px;"> <!-- About Section at the Bottom -->
+            <h2>About Us</h2>
+            <p>Learn more about our mission and values.</p>
+        </section>
+        <footer>
+            <p>&copy; 2024 Pathways to Progress</p> <!-- Footer with black text -->
+        </footer>
+    </div>
+
+    <script>
+        // Add click event listeners to each section
+        document.querySelectorAll('.hover-section').forEach(section => {
+            section.addEventListener('click', () => {
+                alert(`You clicked on ${section.querySelector('h2').innerText}`);
+            });
+        });
+
+        // Handle donation form submission
+        document.getElementById('donationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const amount = document.getElementById('amount').value;
+            alert(`Thank you, ${name}! Your donation of $${amount} has been received. A confirmation has been sent to ${email}.`);
+            this.reset(); // Reset the form fields
+        });
+    </script>
+</body>
+</html>
